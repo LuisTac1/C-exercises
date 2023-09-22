@@ -25,9 +25,7 @@ void PrintMessage(string message, bool printTop = true, bool printBottom = true)
         }
         front = !front;
     }
-
     cout << message.c_str();
-
     if (printBottom)
     {
         cout << "|" << endl;
@@ -38,7 +36,6 @@ void PrintMessage(string message, bool printTop = true, bool printBottom = true)
         cout << "|" << endl;
     }
 }
-
 void DrawHangman(int guessCout = 0)
 {
     if (guessCout >= 1)
@@ -80,7 +77,6 @@ void DrawHangman(int guessCout = 0)
     else
         PrintMessage("", false, false);
 }
-
 void PrintLetters(string input, char from, char to)
 {
 
@@ -98,7 +94,6 @@ void PrintLetters(string input, char from, char to)
     }
     PrintMessage(s, false, false);
 }
-
 int main()
 {
 
