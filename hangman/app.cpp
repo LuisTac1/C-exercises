@@ -8,11 +8,14 @@ void PrintMessage(string message, bool printTop = true, bool printBottom = true)
         cout << "+--------------------------------------------------+" << endl;
         cout << "|";
     }
+    
     else
     {
         cout << "|";
     }
+    
     bool front = true;
+    
     for (int i = message.length(); i < 50; i++)
     {
         if (front)
@@ -25,12 +28,15 @@ void PrintMessage(string message, bool printTop = true, bool printBottom = true)
         }
         front = !front;
     }
+    
     cout << message.c_str();
+    
     if (printBottom)
     {
         cout << "|" << endl;
         cout << "+--------------------------------------------------+" << endl;
     }
+    
     else
     {
         cout << "|" << endl;
@@ -38,6 +44,7 @@ void PrintMessage(string message, bool printTop = true, bool printBottom = true)
 }
 void DrawHangman(int guessCout = 0)
 {
+
     if (guessCout >= 1)
         PrintMessage("|", false, false);
     else
@@ -77,6 +84,7 @@ void DrawHangman(int guessCout = 0)
     else
         PrintMessage("", false, false);
 }
+
 void PrintLetters(string input, char from, char to)
 {
 
@@ -94,6 +102,7 @@ void PrintLetters(string input, char from, char to)
     }
     PrintMessage(s, false, false);
 }
+
 int main()
 {
 
